@@ -2,13 +2,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title>Embedded Messaging Example</title>
+    <title>Pharma Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005bb5;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .hero {
+            background-color: #0073e6;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .content .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem;
+        }
+        footer {
+            background-color: #005bb5;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+        .chat-hint {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background-color: #0073e6;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Our Website</h1>
-    <p>Click the button below to open the messaging window.</p>
-    <button onclick="initEmbeddedMessaging()">Open Messaging Window</button>
-    <script type='text/javascript'>
+    <header>
+        <h1>Pharma Company</h1>
+    </header>
+    <div class="container">
+        <div class="hero">
+            <h1>Welcome to Pharma Company</h1>
+            <p>Your health, our priority.</p>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>About Us</h2>
+                <p>We are a leading pharmaceutical company dedicated to improving health and well-being.</p>
+            </div>
+            <div class="card">
+                <h2>Our Services</h2>
+                <p>We offer a wide range of healthcare services and products to meet your needs.</p>
+            </div>
+            <div class="card">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us to ask about a product, report an issue or an adverse effect. Click the black chat icon at the bottom right to start a conversation</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Pharma Company. All rights reserved.</p>
+    </footer>
+
+<script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
@@ -27,5 +120,6 @@
 	};
 </script>
 <script type='text/javascript' src='https://orgfarm-f1d511bedd-dev-ed.develop.my.site.com/ESWVoiceBotPOC1743505399181/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 </body>
 </html>
