@@ -8,30 +8,8 @@
 <body>
     <h1>Welcome to Our Website</h1>
     <p>Click the button below to open the messaging window.</p>
-    <button onclick="initEmbeddedMessaging()">Open Messaging Window</button>
+    <button onclick="">Open Messaging Window</button>
 
-    <script type='text/javascript'>
-        function initEmbeddedMessaging() {
-            try {
-                // Set the language for the embedded messaging
-                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
-                // Initialize the embedded messaging
-                embeddedservice_bootstrap.init(
-                    '00DdM00000MCMUl', // Salesforce organization ID
-                    'ESA_Web_Deployment', // Deployment name
-                    'https://orgfarm-f1d511bedd-dev-ed.develop.my.site.com/ESWESAWebDeployment1724800920657', // URL to the Salesforce site
-                    {
-                        scrt2URL: 'https://orgfarm-f1d511bedd-dev-ed.develop.my.salesforce-scrt.com' // Additional settings
-                    }
-                );
-            } catch (err) {
-                // Log any errors that occur during initialization
-                console.error('Error loading Embedded Messaging: ', err);
-            }
-        };
-    </script>
-
-    <script type='text/javascript' src='https://orgfarm-f1d511bedd-dev-ed.develop.my.site.com/ESWESAWebDeployment1724800920657/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    
 </body>
 </html>
